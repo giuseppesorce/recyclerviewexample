@@ -50,13 +50,11 @@ public class MainActivity extends ActionBarActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         toolbar.setNavigationIcon(R.mipmap.ic_ab_drawer);
-        // create arratlist from array string
+        // create arrayist from array-string resources
         countries = new ArrayList<String>(Arrays.asList(getResources()
                 .getStringArray(R.array.countries)));
         // get recyclerview
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        // 
-        mRecyclerView.setHasFixedSize(true);
         // create Adapter
         mAdapter = new CountriesAdapter(countries);
         // create LinearLayoutManager: default orientation is LinearLayout.VERTICAL
@@ -75,7 +73,6 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.grid) {
             GridLayoutManager manager;
             if (!spanned) {
@@ -107,7 +104,7 @@ public class MainActivity extends ActionBarActivity {
             }
             mRecyclerView.setLayoutManager(mLayoutManager);
 
-
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
