@@ -27,10 +27,10 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.ViewHolder> {
+public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.MyViewHolder> {
 
 
-    private final ArrayList<String> countries;
+    private ArrayList<String> countries;
 
     public CountriesAdapter(ArrayList<String> countries) {
         this.countries = countries;
@@ -38,15 +38,15 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
 
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.country_item, parent, false);
-        ViewHolder vh = new ViewHolder(v);
+        MyViewHolder vh = new MyViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+    public void onBindViewHolder(MyViewHolder viewHolder, int position) {
         viewHolder.mCountryText.setText(countries.get(position));
     }
 
@@ -56,11 +56,11 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.View
         return countries.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mCountryText;
 
-        public ViewHolder(View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             mCountryText = (TextView) itemView.findViewById(R.id.tvCountry);
         }

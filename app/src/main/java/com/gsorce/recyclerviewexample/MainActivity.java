@@ -53,12 +53,21 @@ public class MainActivity extends ActionBarActivity {
         // create arrayist from array-string resources
         countries = new ArrayList<String>(Arrays.asList(getResources()
                 .getStringArray(R.array.countries)));
+
+
+
         // get recyclerview
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+
+
         // create Adapter
         mAdapter = new CountriesAdapter(countries);
+
+
         // create LinearLayoutManager: default orientation is LinearLayout.VERTICAL
         mLayoutManager = new LinearLayoutManager(this);
+
+
        // set layout manager
         mRecyclerView.setLayoutManager(mLayoutManager);
         // set default animator
