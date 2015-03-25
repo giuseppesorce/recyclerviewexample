@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 
      Copyright (C) 2015 Giuseppe Sorce.
  
@@ -16,20 +15,14 @@
   limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        tools:text="Italy"
-        android:layout_margin="5dp"
-        android:background="#fff5f5f5"
-        android:paddingLeft="5dp"
-        android:id="@+id/tvCountry"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_height="match_parent" />
-</LinearLayout>
+    android:gravity="center_vertical"
+    tools:text="Italy"
+    android:layout_margin="5dp"
+    android:background="#fff5f5f5"
+    android:padding="10dp"
+    android:id="@+id/tvCountry"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_height="match_parent" />
