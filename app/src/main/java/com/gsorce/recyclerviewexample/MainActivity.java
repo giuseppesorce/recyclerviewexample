@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
         // get recyclerview
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
-
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         // create Adapter
         mAdapter = new CountriesAdapter(countries);
 

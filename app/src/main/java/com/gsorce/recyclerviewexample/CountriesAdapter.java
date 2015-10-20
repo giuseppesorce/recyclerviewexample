@@ -31,6 +31,7 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.MyVi
 
 
     private ArrayList<String> countries;
+    private int previousPosition;
 
     public CountriesAdapter(ArrayList<String> countries) {
         this.countries = countries;
@@ -48,6 +49,12 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.MyVi
     @Override
     public void onBindViewHolder(MyViewHolder viewHolder, int position) {
         viewHolder.mCountryText.setText(countries.get(position));
+        if(position > previousPosition){
+            new AnimationUtils().animate(viewHolder,true);
+        }else{
+            new AnimationUtils().animate(viewHolder,false);
+        }
+        previousPosition= position;
     }
 
 
